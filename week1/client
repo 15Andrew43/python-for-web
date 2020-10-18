@@ -1,0 +1,23 @@
+Last login: Thu Oct  8 17:45:45 on ttys005
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+MBP-Andrej:~ andrew_borovets$ cd /Users/andrew_borovets/Desktop/proga/PYTHON_FOR_WEB/python-for-web/week1
+MBP-Andrej:week1 andrew_borovets$ vagrant ssh
+Last login: Thu Oct  8 14:51:53 2020 from 10.0.2.2
+[vagrant@localhost ~]$ telnet 127.0.0.1 3000
+Trying 127.0.0.1...
+Connected to 127.0.0.1.
+Escape character is '^]'.
+hello
+world
+!!!
+Connection closed by foreign host.
+[vagrant@localhost ~]$ ^C
+[vagrant@localhost ~]$ nc -u 127.0.0.1 3000
+abcdef
+klmnopq
+
+
+

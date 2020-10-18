@@ -1,0 +1,90 @@
+Last login: Thu Oct  8 17:49:37 on ttys004
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+MBP-Andrej:~ andrew_borovets$ sudo tcpdump -i lo port 3000 -v -A -n -e -K
+Password:
+tcpdump: lo: No such device exists
+(BIOCSETIF failed: Device not configured)
+MBP-Andrej:~ andrew_borovets$ cd /Users/andrew_borovets/Desktop/proga/PYTHON_FOR_WEB/python-for-web/week1
+MBP-Andrej:week1 andrew_borovets$ sudo tcpdump -i lo port 3000 -v -A -n -e -K
+tcpdump: lo: No such device exists
+(BIOCSETIF failed: Device not configured)
+MBP-Andrej:week1 andrew_borovets$ vagrant ssh
+Last login: Thu Oct  8 14:46:41 2020 from 10.0.2.2
+[vagrant@localhost ~]$ sudo tcpdump -i lo port 3000 -v -A -n -e -K
+tcpdump: listening on lo, link-type EN10MB (Ethernet), capture size 262144 bytes
+14:52:14.437413 00:00:00:00:00:00 > 00:00:00:00:00:00, ethertype IPv4 (0x0800), length 74: (tos 0x10, ttl 64, id 50226, offset 0, flags [DF], proto TCP (6), length 60)
+    127.0.0.1.40014 > 127.0.0.1.hbci: Flags [S], seq 3188026032, win 43690, options [mss 65495,sackOK,TS val 306818 ecr 0,nop,wscale 6], length 0
+E..<.2@.@.xw.........N....j..........0.........
+............
+14:52:14.437422 00:00:00:00:00:00 > 00:00:00:00:00:00, ethertype IPv4 (0x0800), length 74: (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto TCP (6), length 60)
+    127.0.0.1.hbci > 127.0.0.1.40014: Flags [S.], seq 2358027192, ack 3188026033, win 43690, options [mss 65495,sackOK,TS val 306818 ecr 306818,nop,wscale 6], length 0
+E..<..@.@.<............N......j......0.........
+............
+14:52:14.437431 00:00:00:00:00:00 > 00:00:00:00:00:00, ethertype IPv4 (0x0800), length 66: (tos 0x10, ttl 64, id 50227, offset 0, flags [DF], proto TCP (6), length 52)
+    127.0.0.1.40014 > 127.0.0.1.hbci: Flags [.], ack 1, win 683, options [nop,nop,TS val 306818 ecr 306818], length 0
+E..4.3@.@.x~.........N....j..........(.....
+........
+14:52:23.350637 00:00:00:00:00:00 > 00:00:00:00:00:00, ethertype IPv4 (0x0800), length 73: (tos 0x10, ttl 64, id 50228, offset 0, flags [DF], proto TCP (6), length 59)
+    127.0.0.1.40014 > 127.0.0.1.hbci: Flags [P.], seq 1:8, ack 1, win 683, options [nop,nop,TS val 315731 ecr 306818], length 7
+E..;.4@.@.xv.........N....j........../.....
+...S....hello
+
+14:52:23.350645 00:00:00:00:00:00 > 00:00:00:00:00:00, ethertype IPv4 (0x0800), length 66: (tos 0x0, ttl 64, id 3387, offset 0, flags [DF], proto TCP (6), length 52)
+    127.0.0.1.hbci > 127.0.0.1.40014: Flags [.], ack 8, win 683, options [nop,nop,TS val 315731 ecr 315731], length 0
+E..4.;@.@./............N......j......(.....
+...S...S
+
+
+
+
+
+14:52:35.430268 00:00:00:00:00:00 > 00:00:00:00:00:00, ethertype IPv4 (0x0800), length 72: (tos 0x0, ttl 64, id 3388, offset 0, flags [DF], proto TCP (6), length 58)
+    127.0.0.1.hbci > 127.0.0.1.40014: Flags [P.], seq 1:7, ack 8, win 683, options [nop,nop,TS val 327811 ecr 315731], length 6
+E..:.<@.@./............N......j............
+.......Sworld
+
+14:52:35.430276 00:00:00:00:00:00 > 00:00:00:00:00:00, ethertype IPv4 (0x0800), length 66: (tos 0x10, ttl 64, id 50229, offset 0, flags [DF], proto TCP (6), length 52)
+    127.0.0.1.40014 > 127.0.0.1.hbci: Flags [.], ack 7, win 683, options [nop,nop,TS val 327811 ecr 327811], length 0
+E..4.5@.@.x|.........N....j..........(.....
+........
+
+
+
+
+
+14:52:41.468417 00:00:00:00:00:00 > 00:00:00:00:00:00, ethertype IPv4 (0x0800), length 71: (tos 0x10, ttl 64, id 50230, offset 0, flags [DF], proto TCP (6), length 57)
+    127.0.0.1.40014 > 127.0.0.1.hbci: Flags [P.], seq 8:13, ack 7, win 683, options [nop,nop,TS val 333849 ecr 327811], length 5
+E..9.6@.@.xv.........N....j..........-.....
+........!!!
+
+14:52:41.468424 00:00:00:00:00:00 > 00:00:00:00:00:00, ethertype IPv4 (0x0800), length 66: (tos 0x0, ttl 64, id 3389, offset 0, flags [DF], proto TCP (6), length 52)
+    127.0.0.1.hbci > 127.0.0.1.40014: Flags [.], ack 13, win 683, options [nop,nop,TS val 333849 ecr 333849], length 0
+E..4.=@.@./............N......j......(.....
+........
+^C
+9 packets captured
+18 packets received by filter
+0 packets dropped by kernel
+[vagrant@localhost ~]$ 
+[vagrant@localhost ~]$ exit                                       
+logout
+Connection to 127.0.0.1 closed.
+MBP-Andrej:week1 andrew_borovets$ sudo tcpdump -i lo port 3000 -v -A -n -e -K
+tcpdump: lo: No such device exists
+(BIOCSETIF failed: Device not configured)
+MBP-Andrej:week1 andrew_borovets$ vagrant ssh
+Last login: Thu Oct  8 14:51:55 2020 from 10.0.2.2
+[vagrant@localhost ~]$ sudo tcpdump -i lo port 3000 -v -A -n -e -K
+tcpdump: listening on lo, link-type EN10MB (Ethernet), capture size 262144 bytes
+14:53:54.566121 00:00:00:00:00:00 > 00:00:00:00:00:00, ethertype IPv4 (0x0800), length 49: (tos 0x0, ttl 64, id 40058, offset 0, flags [DF], proto UDP (17), length 35)
+    127.0.0.1.46983 > 127.0.0.1.hbci: UDP, length 7
+E..#.z@.@..M..............."abcdef
+
+14:54:05.469201 00:00:00:00:00:00 > 00:00:00:00:00:00, ethertype IPv4 (0x0800), length 50: (tos 0x0, ttl 64, id 43327, offset 0, flags [DF], proto UDP (17), length 36)
+    127.0.0.1.hbci > 127.0.0.1.46983: UDP, length 8
+E..$.?@.@..................#klmnopq
+
+

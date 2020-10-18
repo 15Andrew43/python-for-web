@@ -1,0 +1,23 @@
+Last login: Thu Oct  8 17:49:34 on ttys003
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+MBP-Andrej:~ andrew_borovets$ cd /Users/andrew_borovets/Desktop/proga/PYTHON_FOR_WEB/python-for-web/week1
+MBP-Andrej:week1 andrew_borovets$ vagrant ssh
+Last login: Thu Oct  8 14:51:52 2020 from 10.0.2.2
+[vagrant@localhost ~]$ nc -l 127.0.0.1 3000
+hello
+world
+!!!
+^C
+[vagrant@localhost ~]$ nc -ul 127.0.0.1 3000
+abcdef
+klmnopq
+
+
+
+
+
+
+
